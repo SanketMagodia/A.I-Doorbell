@@ -9,8 +9,8 @@ import requests
 # Define these once; use them twice!
 def mail():
     print("sending mail")
-    strFrom = 'sanket4461@gmail.com'
-    strTo = 'magodiasanket@gmail.com'
+    strFrom = 'senders email'
+    strTo = 'receivers email'
 
     # Create the root message and fill in the from, to, and subject headers
     msgRoot = MIMEMultipart('related')
@@ -48,7 +48,7 @@ def mail():
     # smtp.sendmail(strFrom, strTo, msgRoot.as_string())
     # smtp.quit()
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-        smtp.login(strFrom, "kyfnzgnexcrusczr")
+        smtp.login(strFrom, "your id here")
         smtp.sendmail(strFrom, strTo, msgRoot.as_string())
 
 cap = cv2.VideoCapture(1)
@@ -65,7 +65,7 @@ while cap.isOpened():
         wait(5)
         ret, frame = cap.read()
         matplotlib.image.imsave('t3.jpg', frame)
-        url = 'http://127.0.0.1:5000'
+        url = 'http://127.0.0.1:5000' # server location
         r = requests.post(url, files={'image': open('t3.jpg', 'rb')})
         matplotlib.image.imsave('t2.jpg', np.array(r.json()['result'])/255)
         if len(r.json()['output'])>0:
