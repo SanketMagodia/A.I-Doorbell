@@ -6,13 +6,17 @@
 
 This project implements an intelligent doorbell system utilizing YOLOv5 for object detection. It categorizes visitors and packages between distinct classes (e.g., person, Walmart delivery, parcel, mail) and alerts the homeowner via email or phone.
 
+## Demo
+
+![alt text](https://github.com/SanketMagodia/A.I-Doorbell/blob/master/Screenshot%202023-05-13%20204644.png)
+
 ## Key Features
 
 - Real-time object detection using YOLOv5
 - Customizable class recognition
 - Efficient server-client architecture
 - Flexible email/phone notifications
-- Customizable bounding boxes
+
 - Open-source framework (YOLOv5, Flask)
 
 ## System Architecture
@@ -28,23 +32,17 @@ This project implements an intelligent doorbell system utilizing YOLOv5 for obje
    - Sends bounding boxes/labels back
 3. **Client:**
    - Receives detection results
-   - Displays marked video stream
    - Triggers email/phone alerts
 
-## Prerequisites
 
+
+
+
+## Prerequisites
 - Python 3.x
 - OpenCV
 - Flask
 - YOLOv5 (https://github.com/ultralytics/yolov5)
-
-## Demo
-
-![alt text](https://github.com/SanketMagodia/A.I-Doorbell/blob/master/Screenshot%202023-05-13%20204644.png)
-
-
-## Prerequisites
-
 Ensure you have the required dependencies installed by running
 
 ```bash
